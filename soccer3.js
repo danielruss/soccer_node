@@ -343,7 +343,7 @@ function preprocess_one_line(args) {
     return args;
 }
 
-function preprocess(id, jobTitles, jobTasks) {
+export function preprocess(id, jobTitles, jobTasks) {
     let preprocessed_data = jobTitles.map((title, index) => {
         let row = preprocess_one_line({ JobTitle: title, JobTask: jobTasks[index] })
         row.Id = id[index]
